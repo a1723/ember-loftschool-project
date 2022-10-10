@@ -8,7 +8,7 @@ git config user.email "sashkakonowawka4@gmail.com"
 
 echo "Start to deploy..."
 
-git checkout --orphan develop
+# git checkout --orphan develop
 
 git --work-tree ./dist add --all
 git --work-tree ./dist commit -m "Deploy to GitHub Pages"
