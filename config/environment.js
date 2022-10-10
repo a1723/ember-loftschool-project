@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-loftschool-project',
     environment,
-    rootURL: '/',
+    rootURL: '/ember-loftschool-project',
     locationType: 'history',
     EmberENV: {
       FEATURES: {
