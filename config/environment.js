@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-loftschool-project',
     environment,
-    rootURL: '/ember-loftschool-project',
+    rootURL: '/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {
@@ -41,6 +41,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.rootURL = '/ember-loftschool-project'
   }
 
   return ENV;
