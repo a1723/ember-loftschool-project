@@ -44,7 +44,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'ci') {
-    ENV.rootURL = '/ember-loftschool-project'
+    ENV.rootURL = '/ember-loftschool-project';
   }
 
   return ENV;
