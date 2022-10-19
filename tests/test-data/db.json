@@ -1,0 +1,22 @@
+{
+    "authors": [
+        {
+          "id": 1,
+          "type": "author",
+					"firstName": "Robert1",
+					"lastName": "Martin2"
+        },
+        {
+          "id": 2,
+          "type": "author",
+					"firstName": "C.S.3",
+					"lastName": "Lewis4"
+        },
+        {
+          "id": 3,
+          "type": "author",
+					"firstName": "Edgar5",
+					"lastName": "Poe6"
+        }
+      ]
+}
