@@ -14,9 +14,9 @@
   <ul class='collection'>
 		{{#each this.model as |author|}}
 			<li>
-				<a href>
+        <LinkTo @route="author.detail" @model="{{author.id}}">
 					<strong>{{ author.firstName }}</strong>, {{ author.lastName }}
-				</a>
+				</LinkTo>
 			</li>
 		{{/each}}
   </ul>

@@ -3,6 +3,7 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-loftschool-project',
+    backEndURL: 'http://localhost:3000',
     environment,
     rootURL: '/',
     locationType: 'history',
@@ -16,6 +17,7 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      backEndURL: 'http://localhost:3000',
     },
   };
 
