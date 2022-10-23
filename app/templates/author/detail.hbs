@@ -7,12 +7,18 @@
 
     <div class="slide-out-heading">
       <div class="title">
-        <h3>{{ this.model.firstName }} {{ this.model.lastName }} </h3>
+        <h3>
+          {{ this.model.firstName }}
+          {{ this.model.lastName }}
+        </h3>
 
         <div class="actions">
-          <a href class="btn-pop">edit</a>
-
-          <button class="btn-recessed">delete</button>
+          <LinkTo class="btn-submit"
+                  @route="author.edit"
+                  @model="{{this.model.id}}"
+          >
+            edit
+          </LinkTo>
         </div>
       </div>
     </div>

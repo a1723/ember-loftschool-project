@@ -19,4 +19,15 @@ export default class DataServiceService extends Service {
     return response.json();
     // return (await fetch(`${ENV.backEndURL}/authors`)).json();
   }
+
+  changeAuthor(author) {
+    let url = getOwner(this).application;
+    return fetch(`${url.backEndURL}/authors/${author.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json', // header нужен т.к. работает с json-server
+      },
+      body: JSON.stringify(author),
+    });
+  }
 }
