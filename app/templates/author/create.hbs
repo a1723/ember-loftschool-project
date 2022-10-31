@@ -1,17 +1,14 @@
-{{page-title "Edit"}}
+{{page-title "Create"}}
 <div class="slide-out-bg"></div>
 <div class="slide-out">
   <div class="slide-out-card">
-    <LinkTo @route="author" class="btn-back" @model="{{this.model.id}}">
+    <LinkTo @route="author" class="btn-back">
       <span class="sr-only">Back</span>
     </LinkTo>
 
     <div class="slide-out-heading">
       <div class="title">
-        <h3>
-			{{ this.model.firstName }}
-			{{ this.model.lastName }}
-		</h3>
+        <div class="">Add new Author</div>
       </div>
     </div>
 
@@ -22,9 +19,9 @@
 						First Name:
 					</label>
 					<input type="text"
-						   placeholder="First Name"
-						   value="{{this.model.firstName}}"
-						   oninput={{action "changeFirstName" value="target.value"}}
+								 placeholder="First Name"
+								 value="{{this.model.firstName}}"
+								 oninput={{action "changeFirstName" value="target.value"}}
 					>
 				</div>
 
@@ -32,10 +29,10 @@
 					<label>
 						Last Name:
 					</label>
-					<input type="text"
+					{{input type="text"
 						   placeholder="Last Name"
-						   value="{{this.model.lastName}}"
-					>
+						   value=this.model.lastName
+                    }}
 				</div>
 
 				<div class="form-footer">
