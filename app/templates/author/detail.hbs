@@ -13,12 +13,17 @@
         </h3>
 
         <div class="actions">
-          <LinkTo class="btn-submit"
+          <LinkTo class="btn-pop"
                   @route="author.edit"
                   @model="{{this.model.id}}"
           >
             edit
           </LinkTo>
+          <button class="btn-recesses"
+                  {{on "click" this.deleteAuthor}}
+          >
+            delete
+          </button>
         </div>
       </div>
     </div>

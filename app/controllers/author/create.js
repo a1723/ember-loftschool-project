@@ -3,18 +3,18 @@ import { action } from '@ember/object';
 import { inject } from '@ember/service';
 
 export default class AuthorCreateController extends Controller {
-    @inject dataService;
+  @inject dataService;
 
-    @action
-    async saveAuthor(e) {
-      e.preventDefault();
+  @action
+  async saveAuthor(e) {
+    e.preventDefault();
 
-      await this.dataService.createAuthor(this.model);
-      this.transitionToRoute('author');
-    }
+    await this.dataService.createAuthor(this.model);
+    this.transitionToRoute('author');
+  }
 
-    @action
-    changeFirstName(firstName) {
-      this.model.firstName = firstName;
-    }
+  @action
+  changeFirstName(firstName) {
+    this.model.firstName = firstName;
+  }
 }

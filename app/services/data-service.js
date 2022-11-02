@@ -31,6 +31,16 @@ export default class DataServiceService extends Service {
     });
   }
 
+  deleteAuthor(id) {
+    // то же самое только через getOwner
+    let url = getOwner(this).application;
+    return fetch(`${url.backEndURL}/authors/${id}`, {
+      method: 'DELETE',
+    });
+
+    // return (await fetch(`${ENV.backEndURL}/authors`)).json();
+  }
+
   changeAuthor(author) {
     let url = getOwner(this).application;
     return fetch(`${url.backEndURL}/authors/${author.id}`, {
