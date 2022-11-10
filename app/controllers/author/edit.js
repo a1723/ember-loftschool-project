@@ -17,4 +17,9 @@ export default class AuthorEditController extends Controller {
   changeFirstName(firstName) {
     this.model.firstName = firstName;
   }
+
+  @action
+  changeLastName(lastName) {
+    this.model.lastName = lastName;
+  }
 }
