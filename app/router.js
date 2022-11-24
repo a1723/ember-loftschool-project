@@ -12,4 +12,5 @@ Router.map(function () {
     this.route('edit', { path: '/:id/edit' });
     this.route('create');
   });
+  this.route('not-found', { path: '*path' });
 });
