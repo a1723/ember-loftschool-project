@@ -10,12 +10,20 @@ export default class AuthorRoute extends Route {
     }
   }
 
-  async model(params) {
-    return this.dataService.readAuthors(params.search);
+  async model() {
+    return {
+      isLoading: true
+    };
   }
 
   @action
   loading() {
     return false;
+  }
+
+  setupController(controller, model) {
+    super.setupController(...arguments);
+
+    controller.loadData();
   }
 }
