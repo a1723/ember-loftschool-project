@@ -1,28 +1,21 @@
 import Service from '@ember/service';
-// import ENV from 'ember-loftschool-project/config/environment.js';
-
-import { getOwner } from '@ember/application';
+import config from 'ember-loftschool-project/config/environment';
 
 export default class DataServiceService extends Service {
-  async readAuthors() {
-    // то же самое только через getOwner
-    let url = getOwner(this).application;
-    let response = await fetch(`${url.backEndURL}/authors`);
+  async readAuthors(searchValue) {
+    let searchSegm = searchValue ? `?q=${searchValue}` : '';
+    let response = await fetch(`${config.APP.backEndURL}/authors${searchSegm}`);
     return response.json();
   }
 
   async readAuthor(id) {
-    // то же самое только через getOwner
-    let url = getOwner(this).application;
-    let response = await fetch(`${url.backEndURL}/authors/${id}`);
+    let response = await fetch(`${config.APP.backEndURL}/authors/${id}`);
 
     return response.json();
-    // return (await fetch(`${ENV.backEndURL}/authors`)).json();
   }
 
   createAuthor(author) {
-    let url = getOwner(this).application;
-    return fetch(`${url.backEndURL}/authors`, {
+    return fetch(`${config.APP.backEndURL}/authors`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json', // header нужен т.к. работает с json-server
@@ -32,18 +25,13 @@ export default class DataServiceService extends Service {
   }
 
   deleteAuthor(id) {
-    // то же самое только через getOwner
-    let url = getOwner(this).application;
-    return fetch(`${url.backEndURL}/authors/${id}`, {
+    return fetch(`${config.APP.backEndURL}/authors/${id}`, {
       method: 'DELETE',
     });
-
-    // return (await fetch(`${ENV.backEndURL}/authors`)).json();
   }
 
   changeAuthor(author) {
-    let url = getOwner(this).application;
-    return fetch(`${url.backEndURL}/authors/${author.id}`, {
+    return fetch(`${config.APP.backEndURL}/authors/${author.id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json', // header нужен т.к. работает с json-server

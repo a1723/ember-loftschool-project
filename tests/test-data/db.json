@@ -1,18 +1,6 @@
 {
   "authors": [
     {
-      "id": 2,
-      "type": "author",
-      "firstName": "123C.S.2",
-      "lastName": "Lewis"
-    },
-    {
-      "id": 3,
-      "type": "author",
-      "firstName": "Edgar",
-      "lastName": "Poe3"
-    },
-    {
       "firstName": "qwe123",
       "lastName": "qwe",
       "id": 4
@@ -33,11 +21,6 @@
       "id": 7
     },
     {
-      "firstName": "ewe1 author",
-      "lastName": "dadada",
-      "id": 8
-    },
-    {
       "firstName": "123",
       "lastName": "6757",
       "id": 9
@@ -51,6 +34,11 @@
       "firstName": "ase",
       "lastName": "qwe",
       "id": 11
+    },
+    {
+      "firstName": "ssss",
+      "lastName": "wwww",
+      "id": 12
     }
   ]
 }

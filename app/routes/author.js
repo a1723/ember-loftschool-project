@@ -1,13 +1,21 @@
 import Route from '@ember/routing/route';
+import { action } from '@ember/object';
 import { inject } from '@ember/service';
 
 export default class AuthorRoute extends Route {
-  // однотипно через декоратор
   @inject dataService;
-  // dataService = inject('data-service');
+  queryParams = {
+    search: {
+      refreshModel: true
+    }
+  }
 
-  async model() {
-    return this.dataService.readAuthors();
-    // return (await fetch('http://localhost:3000/authors')).json();
+  async model(params) {
+    return this.dataService.readAuthors(params.search);
+  }
+
+  @action
+  loading() {
+    return false;
   }
 }
